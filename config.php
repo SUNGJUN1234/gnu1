@@ -71,7 +71,9 @@ define('G5_SNS_DIR',        'sns');
 define('G5_SYNDI_DIR',      'syndi');
 define('G5_PHPMAILER_DIR',  'PHPMailer');
 define('G5_SESSION_DIR',    'session');
-define('G5_THEME_DIR',      'theme');
+// 테마 설정 해제 05.09
+// define('G5_THEME_DIR',      'theme');
+define('G5_THEME_DIR',      '');
 
 define('G5_GROUP_DIR',      'group');
 define('G5_CONTENT_DIR',    'content');
