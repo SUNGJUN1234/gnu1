@@ -16,7 +16,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <?php
     for ($i=0; $i<$list_count; $i++) {
     ?>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to=<?=$i;?> class="active" aria-current="true" aria-label="Slide "+<?=($i+1);?>></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to=<?=$i;?> class="<?=($i==0)?'active':''?>" aria-current="true" aria-label="Slide "+<?=($i+1);?>></button>
     <?php
     }
     ?>
@@ -45,12 +45,12 @@ for ($i=0; $i<$list_count; $i++) {
 
 ?>
 
-      <div class="carousel-item active">
+      <div class="carousel-item <?=($i==0)?'active':''?>">
       <?php echo $img_link_html; ?>
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <h1><?php echo $list[$i]['wr_subject']; ?></h1>
+            <p><?php echo $list[$i]['wr_content']; ?></p>
             <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
           </div>
         </div>
