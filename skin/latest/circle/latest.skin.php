@@ -27,7 +27,7 @@ for ($i=0; $i<$list_count; $i++) {
         $img = G5_IMG_URL.'/no_img.png';
         $thumb['alt'] = '이미지가 없습니다.';
     }
-    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" style="width:140px;height:140px;border-radius: 50%;">';
+    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" style="background-color:black;width:140px;height:140px;border-radius: 50%;">';
     $img_link_html = '<a href="'.$wr_href.'" class="lt_img" >'.run_replace('thumb_image_tag', $img_content, $thumb).'</a>';
 
 ?>

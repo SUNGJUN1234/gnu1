@@ -17,3 +17,11 @@ if (G5_IS_MOBILE) {
     }
     echo run_replace('board_content_head', html_purifier(stripslashes($board['bo_content_head'])), $board);
 }
+?>
+
+<div class="container">
+    <div style="margin-top:20px;width:100%;height:300px;overflow:hidden;background:url(https://cdn.pixabay.com/photo/2023/04/06/08/18/ai-generated-7903251__340.jpg);">
+        <h1 style="color:white;font-weight:600;">
+            <?=$board['bo_subject']?>
+        </h1>
+    </div>
