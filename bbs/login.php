@@ -22,6 +22,7 @@ if ($is_member) {
         goto_url(G5_URL);
 }
 
+
 $login_url        = login_url($url);
 $login_action_url = G5_HTTPS_BBS_URL."/login_check.php";
 

@@ -193,7 +193,7 @@ if(!defined('G5_IS_ADMIN'))
 ?>
 
 <!-- SJ carousel 불러오기 -->
-<link href="<?php echo G5_CSS_URL; ?>/carousel.css" rel="stylesheet">
+<link href="<?php echo G5_CSS_URL;?>/carousel.css" rel="stylesheet">
 
 
 </head>
