@@ -12,9 +12,14 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+    <?php
+    for ($i=0; $i<$list_count; $i++) {
+    ?>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to=<?=$i;?> class="active" aria-current="true" aria-label="Slide "+<?=($i+1);?>></button>
+    <?php
+    }
+    ?>
     </div>
     <div class="carousel-inner">
 
@@ -34,7 +39,7 @@ for ($i=0; $i<$list_count; $i++) {
       $img = G5_IMG_URL.'/no_img.png';
       $thumb['alt'] = '이미지가 없습니다.';
   }
-  $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" >';
+  $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" style="width:100%" >';
   $img_link_html = '<a href="'.$wr_href.'" class="lt_img" >'.run_replace('thumb_image_tag', $img_content, $thumb).'</a>';
 
 

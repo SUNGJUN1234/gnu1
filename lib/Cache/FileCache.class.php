@@ -39,25 +39,25 @@ class FileCache
 		return is_array($data) ? $data['data'] : FALSE;
 	}
 
-    protected function get_cache_file_path($id){
+protected function get_cache_file_path($id){
 
-        $id = str_replace(DIRECTORY_SEPARATOR, '/', $id);
-        $add_separator = '';
-        $add_file_extension = '';
+    $id = str_replace(DIRECTORY_SEPARATOR, '/', $id);
+    $add_separator = '';
+    $add_file_extension = '';
 
-        if( strpos('/', $id) !== 0 ){
-            $add_separator = '/';
-        }
-        
-        $ext = pathinfo($id, PATHINFO_EXTENSION);
-        
-        if( !(isset($ext['extension']) && $ext['extension']) ){
-            $add_file_extension = $this->file_extension;
-        }
-
-        return $this->_cache_path.$add_separator.$id.$add_file_extension;
-
+    if( strpos('/', $id) !== 0 ){
+        $add_separator = '/';
     }
+    
+    $ext = pathinfo($id);
+
+    if( !(isset($ext['extension']) && $ext['extension']) ){
+        $add_file_extension = $this->file_extension;
+    }
+
+    return $this->_cache_path.$add_separator.$id.$add_file_extension;
+
+}
 
 	protected function _get($id, $expired_time=0)
 	{
