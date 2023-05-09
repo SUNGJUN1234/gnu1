@@ -19,7 +19,7 @@ if (G5_IS_MOBILE) {
     <p>&copy; 2017–2023 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
 </main>
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo G5_JS_URL; ?>/bootstrap.bundle.min.js"></script>
 <!-- 부트스트랩 불러온 부분 -->
 
 

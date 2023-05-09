@@ -64,12 +64,16 @@ if (defined('G5_IS_ADMIN')) {
     $shop_css = '';
     if (defined('_SHOP_')) $shop_css = '_shop';
     echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
+    
+    
+    // SJ 부트스트랩 가져오기 (스타일 경로 커스텀 ./css => G5_CSS_URL )
+    echo '<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">';
+    echo '<link href="'.G5_CSS_URL.'/bootstrap.min.css" rel="stylesheet">';
+
 }
 ?>
 
-<!-- SJ 부트스트랩 가져오기 -->
-<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-<link href="./css/bootstrap.min.css" rel="stylesheet">
+
 <style>
     .bd-placeholder-img {
     font-size: 1.125rem;
@@ -187,8 +191,11 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
+
 <!-- SJ carousel 불러오기 -->
-<link href="./css/carousel.css" rel="stylesheet">
+<link href="<?php echo G5_CSS_URL; ?>/carousel.css" rel="stylesheet">
+
+
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 <?php
