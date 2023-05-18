@@ -17,6 +17,7 @@ if (G5_IS_MOBILE) {
     }
     echo run_replace('board_content_head', html_purifier(stripslashes($board['bo_content_head'])), $board);
 }
+
 ?>
 
 <div class="container">
